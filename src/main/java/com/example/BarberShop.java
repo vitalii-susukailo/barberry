@@ -1,4 +1,4 @@
-package BarberShop;
+package com.example;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -20,5 +20,20 @@ public class BarberShop {
 
     public Customer getNextCustomer() {
         return customerQueue.peek();
+    }
+
+    public static void main(String[] args) {
+        BarberShop barberShop = new BarberShop();
+        Customer customer1 = new Customer("John");
+        Customer customer2 = new Customer("Jane");
+        barberShop.addCustomer(customer1);
+        barberShop.addCustomer(customer2);
+        System.out.println("Number of customers in the queue: " + barberShop.getCustomerCount());
+        Customer nextCustomer = barberShop.getNextCustomer();
+        if (nextCustomer != null) {
+            System.out.println("Next customer in the queue: " + nextCustomer.getName());
+        } else {
+            System.out.println("No customers in the queue");
+        }
     }
 }
