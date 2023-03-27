@@ -1,6 +1,7 @@
 package com.example;
 import java.util.LinkedList;
 import java.util.Queue;
+import com.example.Customer;
 
 public class BarberShop {
 
