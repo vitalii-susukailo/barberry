@@ -5,7 +5,12 @@ import static org.junit.Assert.*;
 
 public class BarberShopTest {
 
+    // As a first step we created unit tests
+
     @Test
+
+    // Tests the addCustomer() method of the BarberShop class. It creates a new BarberShop instance, adds a new Customer instance, and then checks that the customer count is incremented by 1.
+
     public void testAddCustomer() {
         BarberShop barberShop = new BarberShop();
         Customer customer = new Customer("Vitalii");
@@ -14,6 +19,9 @@ public class BarberShopTest {
     }
 
     @Test
+
+    //Tests the removeCustomer() method of the BarberShop class. It creates a new BarberShop instance, adds a new Customer instance, removes the same Customer instance, and then checks that the customer count is decremented back to 0.
+    
     public void testRemoveCustomer() {
         BarberShop barberShop = new BarberShop();
         Customer customer = new Customer("Vitalii");
@@ -23,6 +31,9 @@ public class BarberShopTest {
     }
 
     @Test
+
+    // Tests the getCustomerCount() method of the BarberShop class. It creates a new BarberShop instance and checks that the initial customer count is 0. It then adds two new Customer instances and checks that the customer count is incremented by 2.
+
     public void testGetCustomerCount() {
         BarberShop barberShop = new BarberShop();
         assertEquals(0, barberShop.getCustomerCount());
@@ -35,6 +46,9 @@ public class BarberShopTest {
     }
 
     @Test
+
+    //Tests the getNextCustomer() method of the BarberShop class. It creates a new BarberShop instance and checks that the initial next customer is null. It then adds two new Customer instances and checks that the first added customer is the next customer. It then removes the first customer and checks that the second customer is the next customer.
+
     public void testGetNextCustomer() {
         BarberShop barberShop = new BarberShop();
         assertNull(barberShop.getNextCustomer());
